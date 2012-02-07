@@ -1,5 +1,5 @@
 # SimpleKalman
-SimpleKalman is a very simple 1-dimensional Kalman filter that is written as clearly as possible to help students understand how they work.
+SimpleKalman is a very simple 1-dimensional Kalman filter that is written as clearly as possible as a soft introduction.
 
 * * * 
 
