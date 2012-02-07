@@ -19,3 +19,17 @@ Remember, both of these sensors are _noisy_, and won't give particularly precise
 * * *
 
 The point of a Kalman filter is to "optimally" integrate these two kinds of sensors, trying to take advantage of their best characteristics. It does this by keeping track of the current amount of noise in the system, and then mixing in measurements according to how much noise they will introduce.
+
+## Running
+
+Running SimpleKalman is easy - just fire up MATLAB or Octave, cd to the directory of this repo, and type "SimpleKalman".
+
+A plot window should pop up, showing the robot's actual trajectory in blue.
+
+As the simulation runs, you should see:
+
+-   Green circles showing what our prediction would look like if we just integrated the odometry (pretty bad, right?)
+-   Red stars showing the occasional measurements. Notice how they're usually pretty inaccurate.
+-   Black dots showing the Kalman filtered prediction. 
+
+Try messing around with the variables processNoise and measurementNoise in SimpleKalman.m, and note what effect they have on our filter's output.
