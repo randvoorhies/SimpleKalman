@@ -28,7 +28,7 @@ A plot window should pop up, showing the robot's actual trajectory in blue.
 
 As the simulation runs, you should see:
 
--   Green circles showing what our prediction would look like if we just integrated the odometry (pretty bad, right?)
+-   Green circles showing what our prediction would look like if we just integrated the odometry (pretty bad, right? Check out that drift!)
 -   Red stars showing the occasional measurements. Notice how they're usually pretty inaccurate.
 -   Black dots showing the Kalman filtered prediction. 
 
