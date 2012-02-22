@@ -26,10 +26,19 @@ for t = 1:length(time)
     z = takeMeasurement();
     plot(time(t), z, 'r*');
 
-    y = z - x;
-    k = p / (p + measurementNoise);
-    x = x + k*y;
-    p = (1 - k)*p;
+    y = z - x;                         % Compute the 'residual': i.e. the difference between our estimated position,
+                                       % and our absolute position measurement
+
+    k = p / (p + measurementNoise);    % Compute the 'Kalman gain': i.e. the amount that we should trust this new absolute
+                                       % measurement. Notice that when p is large relative to measurementNoise, k will be
+                                       % close to 1. When measurement noise is large relative to p, k will be close to 0.
+                                       % If p = measurementNoise, then k = 0.5.
+
+    x = x + k*y;                       % Mix in the new absolute measurement proportional to k. If k is 1, then the new x = z. 
+                                       % If k is 0, then the new x = x. If k is 0.5, then the new x = 0.5*x + 0.5*z. 
+
+    p = (1 - k)*p;                     % The new process noise is decreased proportional to k.
+
   end
 
   plot(time(t), x, 'k.');
