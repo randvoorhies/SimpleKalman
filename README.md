@@ -33,3 +33,8 @@ As the simulation runs, you should see:
 -   Black dots showing the Kalman filtered prediction. 
 
 Try messing around with the variables processNoise and measurementNoise in SimpleKalman.m, and note what effect they have on our filter's output.
+
+Learn More!
+===========
+*  [My introductory lecture on Particle Filters](http://ilab.usc.edu/~rand/LectureSlides/445Lectures/ParticleFiltering/index.html)
+*  [My SimpleSLAM project](https://github.com/randvoorhies/SimpleSLAM)
